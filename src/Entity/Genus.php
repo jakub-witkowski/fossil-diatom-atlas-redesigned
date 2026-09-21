@@ -58,12 +58,12 @@ class Genus extends Taxon
 
     public function  printTaxonName(): string
     {
-        return $this->getGenusName();
+        return $this->getGenusName() . ' sp.';
     }
 
     public function printAuthorityAndDate(): string
     {
-        return ' sp.';
+        return '';
     }
 
     public function getGenusPublicationDate(): ?int

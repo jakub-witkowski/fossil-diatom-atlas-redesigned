@@ -115,7 +115,8 @@ class Variety extends Taxon
         $taxonName =
             $this->getGenusNameForVariety() . ' ' .
             $this->getSpeciesNameForVariety() . ' var. ' .
-            $this->getVarietyName() . ' '
+            $this->getVarietyName()
+            // $this->getVarietyName() . ' '
         ;
 
         return $taxonName;
@@ -123,7 +124,7 @@ class Variety extends Taxon
 
     public function printAuthorityAndDate(): string
     {
-        return $this->getVarietyAuthority() . ' (' . $this->getVarietyPublicationDate() . ') ';
+        return $this->getVarietyAuthority() . ' (' . $this->getVarietyPublicationDate() . ')';
     }
 
     public function getVarietyPublicationDate(): ?int
