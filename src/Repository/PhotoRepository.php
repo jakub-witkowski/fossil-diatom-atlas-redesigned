@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Photo;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\QueryBuilder;
 
 /**
  * @extends ServiceEntityRepository<Photo>
@@ -14,6 +15,21 @@ class PhotoRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Photo::class);
+    }
+
+    public function sortPhotosByTaxon(): QueryBuilder
+    {
+        $qb = $this->createQueryBuilder('photo')
+                    ->andWhere('photo.isPublished = 1')
+                    ->join('photo.taxon', 'taxon')
+                    ->join('taxon.genus', 'genus')
+                    ->join('taxon.species', 'species')
+                    ->join('taxon.variety', 'variety')
+                    ->addOrderBy('genus.name')
+                    ->addOrderBy('species.name')
+                    ->addOrderBy('variety.name');
+
+        return $qb;
     }
 
 //    /**
