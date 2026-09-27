@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Lato", serif;
+}
+
+/* p {
+  font-size: 20px;
+  line-height: 1.8;
+} */
+
+#main-page-feature {
+  height: 90vh;
+}
+
+#header-image {
+  height: 64px;
+  display: inline;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  padding-left: 0.75em;
+}
