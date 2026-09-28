@@ -12,10 +12,16 @@ class TestObject
         private string $authorityAndDate,
         private string $description,
         private string $localityAndAge,
-        private string $microscopeAndTechnique
+        private string $microscopeAndTechnique,
+        private string $displayedName
     )
     {
 
+    }
+
+    public function getDisplayedName(): string
+    {
+        return $this->displayedName;
     }
 
     public function getAuthorityAndDate(): string

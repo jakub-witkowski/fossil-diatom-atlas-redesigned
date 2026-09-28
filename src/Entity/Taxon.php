@@ -34,6 +34,9 @@ class Taxon
     #[ORM\OneToMany(targetEntity: Photo::class, mappedBy: 'taxon')]
     private Collection $photos;
 
+    #[ORM\Column(length: 255)]
+    private ?string $displayedName = null;
+
     public function __construct()
     {
         $this->photos = new ArrayCollection();
@@ -102,6 +105,18 @@ class Taxon
                 $photo->setTaxon(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDisplayedName(): ?string
+    {
+        return $this->displayedName;
+    }
+
+    public function setDisplayedName(string $displayedName): static
+    {
+        $this->displayedName = $displayedName;
 
         return $this;
     }
