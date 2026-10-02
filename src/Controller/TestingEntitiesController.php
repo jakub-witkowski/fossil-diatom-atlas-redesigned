@@ -46,6 +46,7 @@ final class TestingEntitiesController extends AbstractController
                 $photo1->getDescription(),
                 $photo1->printLocalityAndAgeForPhoto(),
                 $photo1->printMicroscopeAndTechniqueForPhoto(),
+                $photo1->getTaxon()->getDisplayedName(),
             ),
             new TestObject(
                 $photo2->getTaxon()->printTaxonName(),
@@ -53,6 +54,7 @@ final class TestingEntitiesController extends AbstractController
                 $photo2->getDescription(),
                 $photo2->printLocalityAndAgeForPhoto(),
                 $photo2->printMicroscopeAndTechniqueForPhoto(),
+                $photo2->getTaxon()->getDisplayedName(),
             ),
             new TestObject(
                 $photo3->getTaxon()->printTaxonName(),
@@ -60,6 +62,7 @@ final class TestingEntitiesController extends AbstractController
                 $photo3->getDescription(),
                 $photo3->printLocalityAndAgeForPhoto(),
                 $photo3->printMicroscopeAndTechniqueForPhoto(),
+                $photo3->getTaxon()->getDisplayedName(),
             ),
             new TestObject(
                 $photo4->getTaxon()->printTaxonName(),
@@ -67,6 +70,7 @@ final class TestingEntitiesController extends AbstractController
                 $photo4->getDescription(),
                 $photo4->printLocalityAndAgeForPhoto(),
                 $photo4->printMicroscopeAndTechniqueForPhoto(),
+                $photo4->getTaxon()->getDisplayedName(),
             ),
             new TestObject(
                 $photo5->getTaxon()->printTaxonName(),
@@ -74,6 +78,7 @@ final class TestingEntitiesController extends AbstractController
                 $photo5->getDescription(),
                 $photo5->printLocalityAndAgeForPhoto(),
                 $photo5->printMicroscopeAndTechniqueForPhoto(),
+                $photo5->getTaxon()->getDisplayedName(),
             ),
             new TestObject(
                 $photo6->getTaxon()->printTaxonName(),
@@ -81,6 +86,7 @@ final class TestingEntitiesController extends AbstractController
                 $photo6->getDescription(),
                 $photo6->printLocalityAndAgeForPhoto(),
                 $photo6->printMicroscopeAndTechniqueForPhoto(),
+                $photo6->getTaxon()->getDisplayedName(),
             ),
             new TestObject(
                 $photo7->getTaxon()->printTaxonName(),
@@ -88,6 +94,7 @@ final class TestingEntitiesController extends AbstractController
                 $photo7->getDescription(),
                 $photo7->printLocalityAndAgeForPhoto(),
                 $photo7->printMicroscopeAndTechniqueForPhoto(),
+                $photo7->getTaxon()->getDisplayedName(),
             ),
         ];
 

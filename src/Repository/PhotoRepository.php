@@ -21,14 +21,8 @@ class PhotoRepository extends ServiceEntityRepository
     {
         $qb = $this->createQueryBuilder('photo')
                     ->andWhere('photo.isPublished = 1')
-                    ->join('photo.taxon', 'taxon');
-//                    ->join('taxon.genus', 'genus')
-//                    ->join('taxon.species', 'species')
-//                    ->join('taxon.variety', 'variety')
-//                    ->addOrderBy('taxon.printName', 'ASC');
-//                    ->addOrderBy('genus.name')
-//                    ->addOrderBy('species.name')
-//                    ->addOrderBy('variety.name');
+                    ->join('photo.taxon', 'taxon')
+                    ->addOrderBy('taxon.displayedName');
 
         return $qb;
     }
