@@ -251,14 +251,14 @@ class Photo
 
         if ($this->getSlide()->getSample()->getSite() instanceof UnknownSite)
         {
-            $info =
+            $info = ' ' .
                 $this->getSlide()->getSample()->getSite()->printSiteInfo() . ', ' .
                 $this->getSlide()->printSlideInfo() . ' (' .
                 $this->getRelativeAge() . ')';
         }
         else if ($this->getSlide()->getSample()->getSite() instanceof DeepSeaSite)
         {
-            $info =
+            $info = ' ' .
                 $this->getSlide()->getSample()->printInfo() . ' (' .
                 $this->getRelativeAge() . ')';
         }
@@ -266,7 +266,7 @@ class Photo
         {
             ($this->getSlide() instanceof BMslide) ? $prefix = ', The Natural History Museum (London) slide ' : $prefix = 'sample ';
 
-            $info =
+            $info = ' ' .
                 $this->getSlide()->getSample()->getSite()->printSiteInfo() .
                 $prefix .
                 $this->getSlide()->getLabel() . ' (' .
@@ -274,14 +274,14 @@ class Photo
         }
         else if ($this->getSlide() instanceof BMslide)
         {
-            $info =
+            $info = ' ' .
                 $this->getSlide()->getSample()->getSite()->printSiteInfo() . ', ' .
                 $this->getSlide()->printSlideInfo() . ' (' .
                 $this->getRelativeAge() . ')';
         }
         else if ($this->getSlide()->getSample()->getSite() instanceof OnshoreSite)
         {
-            $info =
+            $info = ' ' .
                 $this->getSlide()->getSample()->getSite()->printSiteInfo() . ' (' .
                 $this->getRelativeAge() . ')';
         }
